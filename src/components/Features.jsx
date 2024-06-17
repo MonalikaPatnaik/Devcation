@@ -122,7 +122,9 @@ const FeaturesSection = () => {
             <DecorationTitle>Chat Bot</DecorationTitle>
             <p>Engage in a lively chat with our friendly bot for a fun and
                  helpful interaction!</p>
+
               <Link to="https://emowellbeing.streamlit.app/" target="_blank">
+              
                   <Button>Chat Now</Button>
                 </Link>
           </DecorationData>
