@@ -1,0 +1,29 @@
+.content{
+    display:flex;
+    flex-direction:row;
+    margin-top:50px;
+    padding:40px 0px;
+    justify-content:center;
+}
+.card{
+    margin-right:20px;
+    border-radius:12px;
+}
+.heading{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align:center;
+    margin-top:50px;
+    color:rgb(46, 46, 181);
+}
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        align-items: center; 
+        justify-content:center;
+    }
+    .card{
+        margin-right:0px;
+        margin-bottom:20px;
+        border-radius:12px;
+    }
+}

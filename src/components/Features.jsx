@@ -1,9 +1,11 @@
 import img1 from "../assets/img1.png";
 import img2 from "../assets/image2.jpg";
 import img3 from "../assets/img-3.png";
+import img4 from "../assets/MH.avif"
 import { useAuth0 } from "@auth0/auth0-react";
 import styled from 'styled-components';
 import { Link } from "react-router-dom";
+
 
 const Section = styled.section`
   padding: 4rem 0 2rem;
@@ -33,9 +35,18 @@ const Container = styled.div`
 
 const DecorationContainer = styled.div`
 display: flex;
-flex-wrap: wrap;
 gap: 2rem;
-justify-content: center;
+flex-wrap:nowrap;
+@media (max-width:400px){
+  display:flex;
+  flex-direction:column;
+  
+}
+@media (max-width:876px){
+  display:flex;
+  flex-wrap:wrap;
+}
+
 `;
 
 const DecorationData = styled.div`
@@ -48,6 +59,12 @@ width: calc(25% - 1rem);
 max-width: 220px;
 flex: 1 0 auto;
 box-sizing: border-box;
+@media (max-width:500px){
+  display:flex;
+  flex-direction:column;
+  width:900px;
+  
+}
 `;
 
 const DecorationImg = styled.img`
@@ -95,23 +112,23 @@ const FeaturesSection = () => {
             />
             <DecorationTitle>Reading Area</DecorationTitle>
             <p>Ready to unwind and let loose? Discover actionable mental health
-                 and wellbeing advice.</p>
+              and wellbeing advice.</p>
 
-              <Link to="/readingarea">
-                  <Button>Read Now</Button>
-                </Link>
+            <Link to="/readingarea">
+              <Button>Read Now</Button>
+            </Link>
           </DecorationData>
           <DecorationData>
             <DecorationImg
-              src={img2} 
+              src={img2}
               alt=""
             />
             <DecorationTitle>Explore Games</DecorationTitle>
             <p>Experience the joy of play to relax and rejuvenate! Dive into
-                 our games for a refreshing escape.</p>
-              <Link to="./games">
-                  <Button>Play Now</Button>
-                </Link>
+              our games for a refreshing escape.</p>
+            <Link to="./games">
+              <Button>Play Now</Button>
+            </Link>
           </DecorationData>
 
           <DecorationData>
@@ -121,10 +138,10 @@ const FeaturesSection = () => {
             />
             <DecorationTitle>Chat Bot</DecorationTitle>
             <p>Engage in a lively chat with our friendly bot for a fun and
-                 helpful interaction!</p>
-              <Link to="https://emowellbeing.streamlit.app/" target="_blank">
-                  <Button>Chat Now</Button>
-                </Link>
+              helpful interaction!</p>
+            <Link to="https://emowellbeing.streamlit.app/" target="_blank">
+              <Button>Chat Now</Button>
+            </Link>
           </DecorationData>
 
           <DecorationData>
@@ -134,14 +151,27 @@ const FeaturesSection = () => {
             />
             <DecorationTitle>Community Forum</DecorationTitle>
             <p> Engage in a lively chat with our friendly bot for a fun and
-                 helpful interaction!</p>
-                 {isAuthenticated ? (
-                <Link to="/forum">
-                  <Button>Learn More</Button>
-                </Link>
-              ) : (
-                <Button onClick={() => loginWithRedirect()}>Learn More</Button>
-              )}
+              helpful interaction!</p>
+            {isAuthenticated ? (
+              <Link to="/forum">
+                <Button>Learn More</Button>
+              </Link>
+            ) : (
+              <Button onClick={() => loginWithRedirect()}>Learn More</Button>
+            )}
+          </DecorationData>
+          <DecorationData>
+            <DecorationImg
+              src={img4}
+              alt=""
+            />
+            <DecorationTitle>Mental Health Tests</DecorationTitle>
+            <p> Take the most popular and effective mental health assessment tests.</p>
+
+            <Link to="./assessment">
+              <Button>Search Tests</Button>
+            </Link>
+
           </DecorationData>
 
         </DecorationContainer>

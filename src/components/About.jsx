@@ -27,7 +27,14 @@ const GreenBox = styled.div`
   position: relative;
   width: 60%;
   overflow: hidden;
-  
+  @media (max-width:800px){
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    height:350px;
+    min-width:70vw;
+    padding:20px;
+  }
   @media (min-width: 1024px) { /* lg breakpoint */
 
     max-width: 680px;
@@ -62,7 +69,11 @@ const Paragraph = styled.p`
   line-height: 1.6;
   color: #fff;
   margin-top: 5px;
-  
+  @media (max-width:500px){
+    display:flex;
+    justify-content:center;
+    font-size:12px;
+  }
   @media (min-width: 1280px) { /* xl breakpoint */
     font-size: 16px;
   }
