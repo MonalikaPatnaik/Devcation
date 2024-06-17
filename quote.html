@@ -1,0 +1,115 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+
+<head> 
+	<meta charset="UTF-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	 <!-- Code for designing the background page -->
+	<style> 
+		* { 
+			margin: 0%; 
+			padding: 0%; 
+			box-sizing: border-box; 
+
+			font-family: Arial, Helvetica, sans-serif; 
+		} 
+
+		body { 
+			background: rgba(135, 139, 140, 0.767); 
+			height: 100%; 
+			background-position: center; 
+			background-repeat: no-repeat; 
+			background-size: cover; 
+		} 
+
+		.container { 
+			margin: 1.5vh 20vw; 
+			margin-top: 10vh; 
+			text-align: center; 
+			background: rgb(209, 39, 195); 
+			background: linear-gradient(to right, red , yellow); 
+			opacity: 0.9; 
+			color: white; 
+			padding: 10px 10vw; 
+			border-radius: 20px; 
+			min-height: 15vh; 
+		} 
+
+		
+		
+		section { 
+			height: 100vh; 
+			width: 100%; 
+			margin-top: -50px; 
+			background-position: center; 
+			background-repeat: no-repeat; 
+		}  
+	</style> 
+</head> 
+
+<body> 
+	
+		<br> 
+		
+
+		<br><br><br> 
+		<section></section> 
+		<br> 
+	 <!-- Array of images which would be displayed -->
+	<script> 
+	
+		const pics = [ 
+			'url( "1.0.jpg")', 
+			'url( "2.0.jpg")', 
+			'url( "3.00.jpg")', 
+			'url( "4.0.jpg")',
+			'url( "5.0.jpg")',  
+			'url( "6.0.jpg")', 
+			'url( "7.0.jpg")', 
+			'url( "8.0.jpeg")', 
+			'url( "9.0.jpg")', 
+			'url( "10.0.jpg")', 
+			'url( "11.0.jpg")', 
+			'url( "12.0.jpg")', 
+			'url( "13.0.jpg")', 
+			'url( "14.0.jpg")',
+			'url( "15.0.jpg")',
+			'url( "16.0.jpg")',
+			'url( "17.0.jpg")',
+			
+		]; 
+		const pic = document.querySelector('section'); 
+		const container = document.getElementById('image-container');
+    
+		var img = pics[0]; 
+		pic.style.backgroundImage = img;
+// Function to display image
+ function showImage(a) { 
+		
+		var img = pics[a]; 
+		pic.style.backgroundImage = img;
+		}
+
+		
+	
+
+	var counter = 1;
+	
+var i = setInterval(function(){
+    showImage(counter);
+
+    counter++;
+	//loop which helps to repeat the images after one cycle
+    if(counter === 18) {
+       
+		counter=0;
+		showImage(counter);
+    }
+}, 86400000); //Setting time duration for every image to change in 24 hours 
+
+	
+		
+	</script> 
+</body> 
+
+</html>
