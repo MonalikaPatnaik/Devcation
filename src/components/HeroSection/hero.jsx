@@ -72,17 +72,18 @@ const HeroSection = () => {
               >
               <HeroH1
                  style={{color: '#164863',fontFamily:'cursive'}}
+                 data-aos="fade-up"
               >Wellness Begins Within</HeroH1>
-                <Typography variant="h1" color="#ffffe6" sx={customH1Styles} >
+                <Typography variant="h1" color="#ffffe6" sx={customH1Styles} data-aos="zoom-in">
                 Healthy Minds, Happy Lives
                 </Typography>
-                <HeroP>
+                <HeroP data-aos="fade-up">
                   We strive to create a community where every voice is heard, respected and celebrated.
                 </HeroP>
               </HeroContent>
             </HeroContainer>
           </Grid>
-          <Grid item xs={12} md={6} sx={{ backgroundColor: "#fff" }} style={{ display: "flex", justifyContent: "center", alignItems: "left",height:"100vh" }}>
+          <Grid item xs={12} md={6} sx={{ backgroundColor: "#fff" }} style={{ display: "flex", justifyContent: "center", alignItems: "left",height:"100vh" }} data-aos="zoom-in" data-aos-duration="1300" >
             {RightSubSectionJSX}
           </Grid>
         </Grid>

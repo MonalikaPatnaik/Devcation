@@ -85,10 +85,10 @@ const FeaturesSection = () => {
   const { isAuthenticated, loginWithRedirect } = useAuth0();
   return (
     <Section id="featureSection">
-      <Title> Our Features</Title>
+      <Title data-aos="fade-up"> Our Features</Title>
       <Container>
         <DecorationContainer>
-          <DecorationData>
+          <DecorationData data-aos="fade-up">
             <DecorationImg
               src={img1}
               alt=""
@@ -101,7 +101,7 @@ const FeaturesSection = () => {
                   <Button>Read Now</Button>
                 </Link>
           </DecorationData>
-          <DecorationData>
+          <DecorationData data-aos="fade-down">
             <DecorationImg
               src={img2} 
               alt=""
@@ -114,7 +114,7 @@ const FeaturesSection = () => {
                 </Link>
           </DecorationData>
 
-          <DecorationData>
+          <DecorationData data-aos="fade-up">
             <DecorationImg
               src={img3}
               alt=""
@@ -127,7 +127,7 @@ const FeaturesSection = () => {
                 </Link>
           </DecorationData>
 
-          <DecorationData>
+          <DecorationData data-aos="fade-down">
             <DecorationImg
               src="https://res.cloudinary.com/dx0dgujbj/image/upload/v1707888470/CerviCare/Homepage/3_sbiawo.png"
               alt=""
