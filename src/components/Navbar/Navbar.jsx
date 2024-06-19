@@ -65,9 +65,9 @@ const Navbar = () => {
   const handleLogoClick = () => {
     window.scrollTo(0, 0);
   };
-  const removeActive = () => {
-    setIsActive(false)
-  }
+  // const removeActive = () => {
+  //   setIsActive(false)
+  // }
 
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
@@ -85,25 +85,25 @@ const Navbar = () => {
         }}
       >
         <NavbarContainer>
-        {/* <NavImg>
-      <Link to="/" onClick={handleLogoClick}>
-        <img src={logo} height={56} alt="Logo" />
-        <NavLogo>
-          TransCARE
-          <SubLogo>YOUR JOURNEY. OUR PRIORITY</SubLogo>
-        </NavLogo>
-      </Link>
-    </NavImg> */}
-    <NavImg>
-              <img src={logo}
-                alt="favicon"
-                height="60"
-              />
-              <NavLogo to="/"  onClick={handleLogoClick}> EmoWell
-              <SubLogo>EMBRACE Wellness</SubLogo>
-              </NavLogo>
-              
-            </NavImg>
+          {/* <NavImg>
+          <Link to="/" onClick={handleLogoClick}>
+            <img src={logo} height={56} alt="Logo" />
+            <NavLogo>
+              TransCARE
+              <SubLogo>YOUR JOURNEY. OUR PRIORITY</SubLogo>
+            </NavLogo>
+          </Link>
+          </NavImg> */}
+          <NavImg>
+            <img src={logo}
+              alt="favicon"
+              height="60"
+            />
+            <NavLogo to="/"  onClick={handleLogoClick}> EmoWell
+            <SubLogo>EMBRACE Wellness</SubLogo>
+            </NavLogo>
+            
+          </NavImg>
 
           <MobileIcon onClick={toggle}>
             {isOpen ? <FaTimes /> : <FaBars />} {/* Close icon when open */}
@@ -115,46 +115,46 @@ const Navbar = () => {
               </NavLinks>
             </Navitem>
             <Navitem>
-              <NavLinks onClick={()=> scrollToSection('about')}>
-               About
+              <NavLinks to="/#about" onClick={()=> scrollToSection('about')}>
+                About
               </NavLinks>
             </Navitem>
             <Navitem className="custom">
-              <NavLinks onClick={()=> scrollToSection('featureSection')}>
+              <NavLinks to="/#Features"  onClick={()=> scrollToSection('featureSection')}>
                 Features
               </NavLinks>
             </Navitem>
             <Navitem>
               <NavLinks to="/contact" onClick={handleLogoClick}>
-               Contact
+                Contact
               </NavLinks>
             </Navitem>
             <Navitem>
               <NavLinks to="/review" onClick={handleLogoClick}>
-               Review
+                Review
               </NavLinks>
             </Navitem>
             {isAuthenticated ? (
-               <li>
-   <Dropdown>
-   <FontAwesomeIcon icon={faUser} style={{ color: '#fff' }}/>
-    <ButtonDropdown onClick={toggleDropdown}>Account
-    <FontAwesomeIcon icon={faCaretDown}  style={{ color: '#fff' }} />
-    </ButtonDropdown>
-    {isOpen && (
-    <Dropdowncontent>
-      <a href="/profile">User Profile</a>
-      <button onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}style={{
-        fontSize:'16px', fontWeight: '600'
-      }}>
-     Log Out
-   </button>
-    </Dropdowncontent>
-    )}
-  </Dropdown>
+            <li>
+              <Dropdown>
+                <FontAwesomeIcon icon={faUser} style={{ color: '#fff' }}/>
+                <ButtonDropdown onClick={toggleDropdown}>Account
+                  <FontAwesomeIcon icon={faCaretDown}  style={{ color: '#fff' }} />
+                </ButtonDropdown>
+                {isOpen && (
+                <Dropdowncontent>
+                  <a href="/profile">User Profile</a>
+                  <button onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}style={{
+                    fontSize:'16px', fontWeight: '600'
+                  }}>
+                  Log Out
+                  </button>
+                </Dropdowncontent>
+                )}
+              </Dropdown>
 
-             </li>
-              ):(
+            </li>
+            ):(
             <li>
               <Button onClick={() => loginWithRedirect()} style={{border:'1px solid rgb(48,175,91)'}}>
               Register</Button>

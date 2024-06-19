@@ -1,3 +1,5 @@
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min";
 
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -9,6 +11,8 @@ import ReadingArea from './Pages/ReadingArea';
 import Games from './Pages/Games';
 import Privacy from './Pages/Privacy';
 // import Features from './components/Features'
+
+import RouteNotFound from './Pages/RouteNotFound';
 
 function App() {
 
@@ -24,6 +28,7 @@ function App() {
     <Route path='/readingarea' element={<ReadingArea/>} />
     <Route path='/games' element={<Games/>} />
     <Route path='/privacy' element={<Privacy/>}/>
+    <Route path='*' element={<RouteNotFound/>}/>
     </Routes>
     </Router>
   
