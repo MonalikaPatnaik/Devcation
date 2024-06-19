@@ -1,13 +1,12 @@
 import './toggle.css';
-const ToggleBtn = ({ value, handleToggleMode, textColor}) => (
+const ToggleBtn = ({ imgSrc, handleToggleMode, textColor}) => (
         <button
           id="tgl"
-          className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold py-2 px-4 border border-blue-500 hover:border-transparent rounded w-1/2"
-          value={value}
+          className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold border border-blue-500 hover:border-transparent rounded w-1/2"
           onClick={handleToggleMode}
-          style ={ {color: textColor}}
+          style ={{color: textColor}}
         >
-          {value}
+          <img src={imgSrc} alt="Toggle Mode" style={{  height: '2.55rem', width: '8rem', borderRadius: '10%' }} />
         </button>
   );
   

@@ -70,18 +70,18 @@ const ReadingArea = () => {
     setShowRest(true); // Show rest div when search is cleared
   };
   const [toggle, setToggle] = useState(false);
-  const [on, setOn] = useState("Switch to Dark Mode");
+  const [imgSrc, setImageSrc] = useState("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnWD5JG36hXD349vgUn0dPfl7MPMGni1dalA&s");
   const [bgColor, setBgColor] = useState("white");
   const [textColor, setTextColor] = useState("black");
   const toggleMode = () => {
     setToggle(!toggle);
     if (toggle) {
-      setOn("Switch to Light Mode");
+      setImageSrc("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpuE9P74LQgeDp2Qa-PFnx8A9VXrCn4aIxJA&s");
       setBgColor("#222222");
       setTextColor("white");
     }
     else {
-      setOn("Switch to Dark Mode");
+      setImageSrc("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnWD5JG36hXD349vgUn0dPfl7MPMGni1dalA&s");
       setBgColor("white");
       setTextColor("black");
     }
@@ -91,7 +91,8 @@ const ReadingArea = () => {
     <div style={
       {backgroundColor: bgColor}
     }>
-      <Navbar />
+      <Navbar/>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
       <SearchBar
         value={searchKey}
         clearSearch={handleClearSearch}
@@ -99,44 +100,42 @@ const ReadingArea = () => {
         handleSearchKey={(e) => setSearchKey(e.target.value)}
       />
 
-      <ToggleBtn value={on} handleToggleMode={toggleMode} textColor={textColor}/>
+      <ToggleBtn imgSrc={imgSrc} handleToggleMode={toggleMode} textColor={textColor}/>
       <br></br>
-      <br></br>
-
-      
-      <h3 className="text-center pb-3" style={
+      </div>
+      <h1 className="text-center pb-3" style={
         {color: textColor}
-      }>Read, learn, connect!</h3>
+      }>Read, learn, connect!</h1>
       {!blogs.length ? <EmptyList /> : <BlogList blogs={blogs} />}
 
       <br></br>
 
       {showRest && (
         <div id="rest">
-          <h3 className="text-center pb-3 pt-5" style={
+          <h1 className="text-center pb-3 pt-5" style={
         {color: textColor}
-      }>Depression</h3>
+      }>Depression</h1>
           {!depressionBlogs.length ? <EmptyList /> : <BlogList blogs={depressionBlogs} />}
           <br></br>
 
-          <h3 className="text-center pb-3 pt-5"
+          <h1 className="text-center pb-3 pt-5"
           style={
             {color: textColor}
-          }>Anxiety</h3>
+          }>Anxiety</h1>
           {!anxietyBlogs.length ? <EmptyList /> : <BlogList blogs={anxietyBlogs} />}
           <br></br>
 
-          <h3 className="text-center pb-3 pt-5"
+          <h1 className="text-center pb-3 pt-5"
           style={
             {color: textColor}
-          }>Post Traumatic Stress Disorder (PTSD)</h3>
+          }>Post Traumatic Stress Disorder (PTSD)</h1>
           {!ptsdBlogs.length ? <EmptyList /> : <BlogList blogs={ptsdBlogs} />}
           <br></br>
 
-          <h3 className="text-center pb-3 pt-5"
+          <h1 className="text-center pb-3 pt-5"
           style={
             {color: textColor}
-          }>Attention Deficit Hyperactivity Disorder (ADHD)</h3>
+          }>Attention Deficit Hyperactivity Disorder (ADHD)</h1>
           {!adhdBlogs.length ? <EmptyList /> : <BlogList blogs={adhdBlogs} />}
           <br></br>
         </div>

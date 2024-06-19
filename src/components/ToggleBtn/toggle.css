@@ -1,2 +1,10 @@
-#tgl{    margin-left: 5rem;
+#tgl{    
+    margin-right: 5rem;
+    width:2rem;
+    padding:0rem;
+}
+img{
+    background-size: cover;
+    padding: 0rem;
+    margin:0rem;
 }
