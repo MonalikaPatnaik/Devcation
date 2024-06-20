@@ -97,7 +97,7 @@ const Navbar = () => {
           <NavImg>
             <img src={logo}
               alt="favicon"
-              height="60"
+              height="2rem"
             />
             <NavLogo to="/"  onClick={handleLogoClick}> EmoWell
             <SubLogo>EMBRACE Wellness</SubLogo>
