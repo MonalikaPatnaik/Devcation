@@ -8,3 +8,9 @@ img{
     padding: 0rem;
     margin:0rem;
 }
+
+@media (max-width: 450px) {
+    #tgl{
+    margin-top: -2.5rem;
+}
+}

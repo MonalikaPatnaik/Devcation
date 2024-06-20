@@ -10,7 +10,7 @@ import { ptsdBlogList } from "../config/ptsdData";
 import { adhdBlogList } from "../config/adhdData";
 import EmptyList from "../components/EmptyList/index";
 import ToggleBtn from "../components/ToggleBtn/index";
-
+import { SearchAndToggle } from "../components/ReadingAreaElements";
 
 const ReadingArea = () => {
   const [blogs, setBlogs] = useState(blogList);
@@ -92,7 +92,8 @@ const ReadingArea = () => {
       {backgroundColor: bgColor}
     }>
       <Navbar/>
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+      <SearchAndToggle>
+
       <SearchBar
         value={searchKey}
         clearSearch={handleClearSearch}
@@ -102,7 +103,7 @@ const ReadingArea = () => {
 
       <ToggleBtn imgSrc={imgSrc} handleToggleMode={toggleMode} textColor={textColor}/>
       <br></br>
-      </div>
+      </SearchAndToggle>
       <h1 className="text-center pb-3" style={
         {color: textColor}
       }>Read, learn, connect!</h1>
