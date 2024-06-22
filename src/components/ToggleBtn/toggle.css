@@ -2,11 +2,15 @@
     margin-right: 5rem;
     width:3rem;
     padding:0rem;
+    border: none;
+    height:2rem;
+    margin-top:3rem;
 }
 img{
     background-size: cover;
     padding: 0rem;
     margin:0rem;
+    border:none;
 }
 
 @media (max-width: 450px) {
