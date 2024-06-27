@@ -1,31 +1,32 @@
 #tgl{    
     margin-right: 5rem;
-    width:3rem;
+    width:2.5rem;
     padding:0rem;
     border: none;
     height:2rem;
     right:2rem;
-    top:4.8rem;
+    top:8rem;
     margin-top:3rem;
     position:absolute;
-}
-img{
     background-size: cover;
     padding: 0rem;
     margin:0rem;
     border:none;
 }
+#tgl:hover{
+    cursor:pointer;
+}
 
 @media (max-width: 700px) {
    
 #tgl{
-    right:-4rem;
+    right:1rem;
 }
 }
 
 @media(max-width: 424px){
     #tgl{
-        top:8.4rem;
+        top:11.7rem;
         left: 43%;
     }
 }
