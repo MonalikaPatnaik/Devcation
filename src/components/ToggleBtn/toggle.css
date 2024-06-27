@@ -4,7 +4,10 @@
     padding:0rem;
     border: none;
     height:2rem;
+    right:2rem;
+    top:4.8rem;
     margin-top:3rem;
+    position:absolute;
 }
 img{
     background-size: cover;
@@ -13,8 +16,16 @@ img{
     border:none;
 }
 
-@media (max-width: 450px) {
-    #tgl{
-    margin-top: -2.5rem;
+@media (max-width: 700px) {
+   
+#tgl{
+    right:-4rem;
 }
+}
+
+@media(max-width: 424px){
+    #tgl{
+        top:8.4rem;
+        left: 43%;
+    }
 }

@@ -4,7 +4,7 @@ export const SearchAndToggle = styled.div`
     alignItems: center;
     justifyContent: center;
 
-  @media (max-width: 450px) {
+  @media (max-width: 410px) {
     display: flex;
     flex-wrap:wrap;
     justify-content: center;
