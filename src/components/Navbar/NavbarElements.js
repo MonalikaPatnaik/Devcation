@@ -54,6 +54,8 @@ export const NavImg = styled.div`
   flex: none;
   order: 0;
   flex-grow: 0;
+  height: 20px;
+  width:5%;
 `;
 
 export const NavLogo = styled(LinkR)`
