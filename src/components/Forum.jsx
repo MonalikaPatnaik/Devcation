@@ -1,7 +1,7 @@
 // ChatComponent.js
-import  { useEffect } from 'react';
-import { ChatEngine } from 'react-chat-engine';
 import { useAuth0 } from '@auth0/auth0-react';
+import { useEffect } from 'react';
+import { ChatEngine } from 'react-chat-engine';
 
 
 const api_key = import.meta.env.VITE_KEY;

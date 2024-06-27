@@ -1,45 +1,44 @@
-import  { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa"; // Import the close icon as well
 import {
+  ButtonDropdown,
+  Dropdown,
+  Dropdowncontent,
+  MobileIcon,
   Nav,
   NavbarContainer,
   NavImg,
-  NavMenu,
   Navitem,
   NavLinks,
-  MobileIcon,
   NavLogo,
+  NavMenu,
   SubLogo,
-  Dropdown,
-  Dropdowncontent,ButtonDropdown,
 } from "./NavbarElements";
 
 // import Dropdown from 'rsuite/Dropdown'; 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
-import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { useAuth0 } from "@auth0/auth0-react";
-import logo from "../../assets/logo.png";
+import { faCaretDown, faUser } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styled from "styled-components";
+import logo from "../../assets/logo.png";
 
 const Button = styled.button`
-padding: 12px 24px;
-font-style: normal;
-  font-weight: 600;
+  padding: 12px 24px;
+  font-style: normal;
+  font-weight: 800;
   font-size: 1.4rem;
   line-height: 22px;
-background: rgb(48, 175, 91);
-color: #fff;
-border: none;
-border-radius: 14px;
-cursor: pointer;
+  color: #fff;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
 
-&:hover {
-  background: #2B394A;
-  color:#fff;
-  text-decoration : none;
-  border: 1px solid rgb(48, 175, 91);
-}
+  &:hover {
+    background: #63d698; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
+    transform: scale(1.16);
+  }
 `;
 const Navbar = () => {
   const [ setIsActive] = useState(false);
